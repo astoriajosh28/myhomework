@@ -1,0 +1,65 @@
+CREATE TABLE Departments (
+    Dept_No VARCHAR   NOT NULL,
+    Dept_Name VARCHAR   NOT NULL,
+    CONSTRAINT pk_Departments PRIMARY KEY (
+        Dept_No
+     )
+);
+
+CREATE TABLE Employees (
+    Emp_No INT   NOT NULL,
+    Birth_Date DATE   NOT NULL,
+    First_Name VARCHAR   NOT NULL,
+    Last_Name VARCHAR   NOT NULL,
+    Gender VARCHAR   NOT NULL,
+    Hire_Date DATE   NOT NULL,
+    CONSTRAINT pk_Employees PRIMARY KEY (
+        Emp_No
+     )
+);
+
+CREATE TABLE Dept_emp (
+    Emp_No INT   NOT NULL,
+    Dept_No VARCHAR   NOT NULL,
+    From_Date DATE   NOT NULL,
+    To_Date Date   NOT NULL
+);
+
+CREATE TABLE Dept_manager (
+    Dept_No VARCHAR   NOT NULL,
+    Emp_No INT   NOT NULL,
+    From_Date DATE   NOT NULL,
+    To_Date Date   NOT NULL
+);
+
+CREATE TABLE Salaries (
+    Emp_No INT   NOT NULL,
+    Salary INT   NOT NULL,
+    From_Date DATE   NOT NULL,
+    To_Date Date   NOT NULL
+);
+
+CREATE TABLE Titles (
+    Emp_No INT   NOT NULL,
+    Title VARCHAR   NOT NULL,
+    From_Date DATE   NOT NULL,
+    To_Date Date   NOT NULL
+);
+
+ALTER TABLE Dept_emp ADD CONSTRAINT fk_Dept_emp_Emp_No FOREIGN KEY(Emp_No)
+REFERENCES Employees (Emp_No);
+
+ALTER TABLE Dept_emp ADD CONSTRAINT fk_Dept_emp_Dept_No FOREIGN KEY(Dept_No)
+REFERENCES Departments (Dept_No);
+
+ALTER TABLE Dept_manager ADD CONSTRAINT fk_Dept_manager_Dept_No FOREIGN KEY(Dept_No)
+REFERENCES Departments (Dept_No);
+
+ALTER TABLE Dept_manager ADD CONSTRAINT fk_Dept_manager_Emp_No FOREIGN KEY(Emp_No)
+REFERENCES Employees (Emp_No);
+
+ALTER TABLE Salaries ADD CONSTRAINT fk_Salaries_Emp_No FOREIGN KEY(Emp_No)
+REFERENCES Employees (Emp_No);
+
+ALTER TABLE Titles ADD CONSTRAINT fk_Titles_Emp_No FOREIGN KEY(Emp_No)
+REFERENCES Employees (Emp_No);
