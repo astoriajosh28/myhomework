@@ -9,3 +9,14 @@ WHERE salaries.emp_no = employees.emp_no;
 SELECT employees.last_name, employees.first_name, employees.hire_date
 FROM employees
 WHERE hire_date between '1985-12-31' and '1987-01-01';
+
+-- 3. List the manager of each department with the following information:
+-- department number, department name, the manager's employee number,
+-- last name, first name, and start and end employment dates.
+
+SELECT dept_manager.dept_no, departments.dept_name,
+dept_manager.emp_no, employees.last_name, employees.first_name,
+dept_manager.from_date,dept_manager.to_date
+FROM dept_manager, departments, employees
+WHERE dept_manager.dept_no = departments.dept_no AND
+dept_manager.emp_no = employees.emp_no;
