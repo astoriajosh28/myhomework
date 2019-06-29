@@ -20,3 +20,11 @@ dept_manager.from_date,dept_manager.to_date
 FROM dept_manager, departments, employees
 WHERE dept_manager.dept_no = departments.dept_no AND
 dept_manager.emp_no = employees.emp_no;
+
+-- 4. List the department of each employee with the following information: 
+-- employee number, last name, first name, and department name.
+
+Select dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
+From dept_emp
+Left Join Employees ON dept_emp.emp_no = employees.emp_no
+Left Join departments ON dept_emp.dept_no = departments.dept_no;
