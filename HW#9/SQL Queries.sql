@@ -27,4 +27,10 @@ dept_manager.emp_no = employees.emp_no;
 Select dept_emp.emp_no, employees.last_name, employees.first_name, departments.dept_name
 From dept_emp
 Left Join Employees ON dept_emp.emp_no = employees.emp_no
-Left Join departments ON dept_emp.dept_no = departments.dept_no;
+Left Join departments ON dept_emp.dept_no = departments.dept_no
+
+-- 5. List all employees whose first name is "Hercules" and last names begin with "B."
+
+Select emp_no, first_name, last_name
+From employees
+Where first_name = 'Hercules' AND last_name Like 'B%'
