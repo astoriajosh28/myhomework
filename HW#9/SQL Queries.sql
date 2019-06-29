@@ -34,3 +34,9 @@ Left Join departments ON dept_emp.dept_no = departments.dept_no
 Select emp_no, first_name, last_name
 From employees
 Where first_name = 'Hercules' AND last_name Like 'B%'
+
+-- 6. List all employees in the Sales department, including their 
+-- employee number, last name, first name, and department name.
+SELECT employees.emp_no, departments.dept_name, employees.last_name, employees.first_name
+FROM departments, employees
+Where dept_name = 'Sales'
