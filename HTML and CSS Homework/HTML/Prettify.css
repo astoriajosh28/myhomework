@@ -8,45 +8,24 @@ body
   
   .navbar li {
     display: d-block;
-    padding: 10px;
+    padding: 30px;
     margin-right: 0px;
     margin-left: 0px;
     cursor: pointer;
   }
   
   p{
-      font-size: 18px;
+      font-size: 16px;
+      text-align: justify;
+      text-decoration: underline;
+      text-shadow: 1px 1px blue;
   }
 
-  .latitude {
+  .navbar-brand {
     color: white;
     font-family: verdana;
-    font-size: 45px;
-    background-color: rgb(25, 103, 155);
+    font-size: 20px;
     border: 1px solid rgb(22, 99, 150);
-      padding: 15px;
   }
 
-  .box{
-    padding: 20px;
-    background: rgb(93, 91, 211);
-    margin-top:10px;
-    margin-bottom:20px;
-    align-content: right;
-  }
 
-  @media (max-width: 500px) {
-    .navbar li {
-      padding: 10px;
-    }
-    .box {
-      margin-right: 22px;
-      margin-left: 22px;
-    }
-    .navbar ul {
-      visibility: visible;
-    }
-    #nav-select {
-      visibility: visible;
-    }
-  }
