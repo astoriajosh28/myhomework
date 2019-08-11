@@ -1,18 +1,8 @@
 body
-  .box{
-    padding: 10px;
-    background: rgb(247, 239, 239);
-    margin-top:50px;
-    margin-left:5px;
-    margin-right:5px;
-    margin-bottom:20px;
-    align-content: center;
-  }
-  
+
   .navbar {
     margin-right: 0px;
     margin-left: 0px;
-    padding: 25px;
     background:whitesmoke;
   }
   
@@ -27,11 +17,7 @@ body
   p{
       font-size: 18px;
   }
-  
-  .c-d{color:white;
-    font-size: 30px;
-  }
-  
+
   .latitude {
     color: white;
     font-family: verdana;
@@ -39,6 +25,14 @@ body
     background-color: rgb(25, 103, 155);
     border: 1px solid rgb(22, 99, 150);
       padding: 15px;
+  }
+
+  .box{
+    padding: 20px;
+    background: rgb(93, 91, 211);
+    margin-top:10px;
+    margin-bottom:20px;
+    align-content: right;
   }
 
   @media (max-width: 500px) {
@@ -50,29 +44,9 @@ body
       margin-left: 22px;
     }
     .navbar ul {
-      visibility: hidden;
+      visibility: visible;
     }
     #nav-select {
       visibility: visible;
     }
-  }
-  
-  .col-1 {width: 8%;}
-  .col-2 {width: 17%;}
-  .col-3 {width: 24%;}
-  .col-4 {width: 32%;}
-  .col-5 {width: 40%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 60%;}
-  .col-8 {width: 65%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 82%;}
-  .col-11 {width: 92%;}
-  .col-12 {width: 100%;}
-  
-  @media only screen and (max-width: 768px) {
-
-      [class*="col-"] {
-          width: 100%;
-      }
   }
