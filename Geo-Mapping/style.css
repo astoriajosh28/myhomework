@@ -1,0 +1,39 @@
+#map,
+body,
+html {
+  height: 100%;
+}
+
+.legend {
+  color: rgb(8, 6, 85);
+  padding: 6px 6px;
+  font: 12px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background: grey;
+  border-radius: 5px;
+  height: 180px;
+}
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  position: absolute;
+}
+.legend li {
+  /* display: inline-block; */
+  width: 20px;
+  height: 20px;
+}
+h4 {
+  font-size: 12px;
+  line-height: 1;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 6px;
+}
+#labels-text {
+  position: absolute;
+  left: 45px;
+  line-height: 22px;
+}
